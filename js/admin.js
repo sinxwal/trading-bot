@@ -187,7 +187,7 @@ function hide_loading() {
 }
 
 $(document).ready(function () {
-  $('[data-toggle="push-menu"]').pushMenu()
+  $('[data-toggle="push-menu"]').pushMenu();
   $('[data-toggle="popover"]').popover();
 
   $('#curPair').select2({
