@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Trading Bot | New bot</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/skin-blue.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body class="layout-boxed skin-blue sidebar-mini">
+
+    <!--  DEMO ANIMATED SPINNER DIV -->
+    <div class="custom-animation">
+      <button class="btn btn-warning">
+        <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+      </button>
+    </div>
+
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>T</b> Bot</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Trading</b> Bot</span>
+    </a>
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+
+          <!-- Notifications -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">2</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 2 notifications</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-warning text-yellow"></i> 5 new members joined today
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                      page and may cause design problems
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+
+          <!-- User Account -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="images/avatar.png" class="user-image" alt="User Image">
+              <span class="hidden-xs">Alexander Pushkin</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="images/avatar.png" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pushkin
+                  <small>Premium ends: 31.12.2018</small>
+                </p>
+              </li>
+              <!-- Menu Menu -->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="images/avatar.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Alexander Pushkin</p>
+          <small>Premium ends: 31.12.2018</small>
+        </div>
+      </div>
+
+      <!-- sidebar menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="active"><a href="new_bot.html"><span>New bot</span></a></li>
+        <li><a href="bots.html"><span>My bots</span></a></li>
+        <li><a href="top.html"><span>Bot top cur</span></a></li>
+        <li><a href="help.html"><span>Help</span></a></li>
+        <li><a href="faq.html"><span>FAQ</span></a></li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Bot setting page
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">New bot</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="box box-primary">
+        <form class="form-horizontal" id="propForm" action="/saveprop" method="post" onsubmit="showPreload()">
+          <div class="box-body">
+
+            <div class="form-group">
+              <label class="col-sm-3 control-label">Exchange</label>
+              <div class="col-sm-5">
+                <select id="exchange" name="exchange" class="form-control" onchange="loadPair()">
+                  <option value="Poloniex">Poloniex</option>
+                  <option value="BTC-E">BTC-E</option>
+                  <option value="Bittrex">Bittrex</option>
+                  <option value="Yobit">Yobit</option>
+                  <option value="Exmo">Exmo</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Status</label>
+                <div class="col-sm-5">
+                  <p class="form-control-static">stopped</p>
+                  <input type="hidden" value="stopped" />
+                </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="telegramChatId">Currency pair:</label>
+            <div class="col-sm-5">
+                <select id="curPair" name="curPair" class="form-control middle" onchange="loadPair()">
+                    <option value="ETH_GNT">ETH_GNT</option>
+                    <option value="BTC_BELA">BTC_BELA</option>
+                    <option value="BTC_RADS">BTC_RADS</option>
+                    <option value="BTC_PASC">BTC_PASC</option>
+                    <option value="BTC_XBC">BTC_XBC</option>
+                    <option value="ETH_GNO">ETH_GNO</option>
+                    <option value="BTC_XRP">BTC_XRP</option>
+                    <option value="BTC_GAME">BTC_GAME</option>
+                    <option value="BTC_EMC2">BTC_EMC2</option>
+                    <option value="XMR_ZEC">XMR_ZEC</option>
+                    <option value="USDT_DASH">USDT_DASH</option>
+                    <option value="BTC_SYS">BTC_SYS</option>
+                    <option value="BTC_AMP">BTC_AMP</option>
+                    <option value="BTC_LSK">BTC_LSK</option>
+                    <option value="USDT_BTC">USDT_BTC</option>
+                    <option value="BTC_LTC">BTC_LTC</option>
+                    <option value="BTC_GRC">BTC_GRC</option>
+                    <option value="BTC_NXC">BTC_NXC</option>
+                    <option value="BTC_GAS">BTC_GAS</option>
+                    <option value="USDT_BCH">USDT_BCH</option>
+                    <option value="ETH_ETC">ETH_ETC</option>
+                    <option value="BTC_OMNI">BTC_OMNI</option>
+                    <option value="BTC_DCR">BTC_DCR</option>
+                    <option value="BTC_NXT">BTC_NXT</option>
+                    <option value="BTC_XCP">BTC_XCP</option>
+                    <option value="ETH_ZEC">ETH_ZEC</option>
+                    <option value="USDT_STR">USDT_STR</option>
+                    <option value="ETH_REP">ETH_REP</option>
+                    <option value="XMR_LTC">XMR_LTC</option>
+                    <option value="BTC_SC">BTC_SC</option>
+                    <option value="XMR_MAID">XMR_MAID</option>
+                    <option value="BTC_HUC">BTC_HUC</option>
+                    <option value="BTC_SBD">BTC_SBD</option>
+                    <option value="BTC_RIC">BTC_RIC</option>
+                    <option value="USDT_REP">USDT_REP</option>
+                    <option value="USDT_ETH">USDT_ETH</option>
+                    <option value="ETH_LSK">ETH_LSK</option>
+                    <option value="USDT_ZEC">USDT_ZEC</option>
+                    <option value="BTC_FLDC">BTC_FLDC</option>
+                    <option value="USDT_ETC">USDT_ETC</option>
+                    <option value="BTC_XMR">BTC_XMR</option>
+                    <option value="BTC_EXP">BTC_EXP</option>
+                    <option value="BTC_NEOS">BTC_NEOS</option>
+                    <option value="BTC_VIA">BTC_VIA</option>
+                    <option value="ETH_GAS">ETH_GAS</option>
+                    <option value="BTC_VRC">BTC_VRC</option>
+                    <option value="BTC_XVC">BTC_XVC</option>
+                    <option value="BTC_NAV">BTC_NAV</option>
+                    <option value="XMR_DASH">XMR_DASH</option>
+                    <option value="BTC_XEM">BTC_XEM</option>
+                    <option value="BTC_STEEM">BTC_STEEM</option>
+                    <option value="USDT_NXT">USDT_NXT</option>
+                    <option value="BTC_PINK">BTC_PINK</option>
+                    <option value="BTC_ARDR">BTC_ARDR</option>
+                    <option value="ETH_STEEM">ETH_STEEM</option>
+                    <option value="BTC_STR">BTC_STR</option>
+                    <option value="BTC_BCN">BTC_BCN</option>
+                    <option value="USDT_LTC">USDT_LTC</option>
+                    <option value="BTC_OMG">BTC_OMG</option>
+                    <option value="BTC_BCH">BTC_BCH</option>
+                    <option value="BTC_ZRX">BTC_ZRX</option>
+                    <option value="BTC_DGB">BTC_DGB</option>
+                    <option value="BTC_BTM">BTC_BTM</option>
+                    <option value="BTC_BCY">BTC_BCY</option>
+                    <option value="BTC_STORJ">BTC_STORJ</option>
+                    <option value="BTC_FCT">BTC_FCT</option>
+                    <option value="BTC_DASH">BTC_DASH</option>
+                    <option value="BTC_POT">BTC_POT</option>
+                    <option value="BTC_CVC">BTC_CVC</option>
+                    <option value="BTC_MAID">BTC_MAID</option>
+                    <option value="XMR_NXT">XMR_NXT</option>
+                    <option value="BTC_GNT">BTC_GNT</option>
+                    <option value="BTC_GNO">BTC_GNO</option>
+                    <option value="BTC_FLO">BTC_FLO</option>
+                    <option value="BTC_VTC">BTC_VTC</option>
+                    <option value="BTC_PPC">BTC_PPC</option>
+                    <option value="USDT_XRP">USDT_XRP</option>
+                    <option value="BTC_BLK">BTC_BLK</option>
+                    <option value="BTC_BTS">BTC_BTS</option>
+                    <option value="BTC_DOGE">BTC_DOGE</option>
+                    <option value="BTC_BTCD">BTC_BTCD</option>
+                    <option value="XMR_BLK">XMR_BLK</option>
+                    <option value="BTC_XPM">BTC_XPM</option>
+                    <option value="USDT_XMR">USDT_XMR</option>
+                    <option value="XMR_BCN">XMR_BCN</option>
+                    <option value="ETH_ZRX">ETH_ZRX</option>
+                    <option value="BTC_NMC">BTC_NMC</option>
+                    <option value="XMR_BTCD">XMR_BTCD</option>
+                    <option value="BTC_BURST">BTC_BURST</option>
+                    <option value="BTC_REP">BTC_REP</option>
+                    <option value="BTC_ETH">BTC_ETH</option>
+                    <option value="BTC_ZEC">BTC_ZEC</option>
+                    <option value="ETH_BCH">ETH_BCH</option>
+                    <option value="BTC_ETC">BTC_ETC</option>
+                    <option value="BTC_STRAT">BTC_STRAT</option>
+                    <option value="BTC_CLAM">BTC_CLAM</option>
+                    <option value="ETH_OMG">ETH_OMG</option>
+                    <option value="ETH_CVC">ETH_CVC</option>
+                    <option value="BTC_LBC">BTC_LBC</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="telegramChatId">Strategy</label>
+            <div class="col-sm-5">
+                <select id="strategy" name="strategy" class="form-control" onchange="loadStrategy()">
+                    <option value="Long">Long</option>
+                </select>
+            </div>
+            </div>
+
+
+            <div class="form-group" id="TypeShortDiv" style="display: none;">
+            <label class="control-label col-sm-3" for="TypeShort">Type of Short :</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Тип шорта" data-container=".row" data-content="Профит в основной монете">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="checkbox" id="TypeShort" class="form-control" name="shortType" value="true" /><input type="hidden" name="_shortType" value="on" />
+                </div>
+            </div>
+            </div>
+
+
+            <div class="form-group" id="StopLossDiv" style="display: none;">
+            <label class="control-label col-sm-3" for="StopLoss">Stop loss :</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Stop loss" data-container="body" data-content="Динамический профит по ограничению Stop loss percent">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="checkbox" id="StopLoss" class="form-control" name="stopLoss" value="true" /><input type="hidden" name="_stopLoss" value="on" />
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group" id="StopLossPercentDiv" style="display: none;">
+            <label class="control-label col-sm-3" for="telegramChatId">Stop loss %:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Stop loss percent" data-container="body" data-content="Stop  loss prcent параметр для ограничения по падению  динамического профита.">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                 </span>
+                    <input type="text" id="stopLossPercent" class="form-control middle" placeholder="Stop loss %" name="lossPercent" value="" />
+
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="telegramChatId">Telegram Id:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Telegram Id" data-container="body" data-content="Bot telegram id for notification.">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                 </span>
+                    <input type="text" id="telegramChatId" class="form-control middle" placeholder="Telegram Id" name="telegramChatId" value="" />
+
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="ApiKey">ApiKey:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Api key" data-container="body" data-content="Excange accouunt api key.">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="ApiKey" class="form-control middle" placeholder="ApiKey" name="apiKey" value="" />
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="SecretKey">SecretKey:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Secret key" data-container="body" data-content="Excange accouunt secret key.">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="SecretKey" class="form-control middle" placeholder="SecretKey" name="secretKey" value="" />
+                </div>
+            </div>
+            </div>
+
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="Depo">Deposit Amount:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Использование депо сумма" data-container="body" data-content="сумма для депозита">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <span class="input-group-addon label-info" title="DepoCur" id="depoCur">ETH</span>
+                    <input type="text" id="DepoAmount" class="form-control middle" placeholder="DepositAmount" name="depoAmount" value="0.0" />
+                    <!--<input type="text" id="depoCur"  class="form-control middle"-->
+                    <!--placeholder="depo amount"-->
+                    <!--readonly="readonly"/>-->
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="Depo">Deposit %:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Использование депо %" data-container="body" data-content="Использование депозит, % – какую часть от твоих USD пускать в оборот">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="Depo" class="form-control middle" placeholder="Deposit" name="depoPercent" value="" />
+                </div>
+            </div>
+            </div>
+
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="firstSteep">First step:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Отступ первого шага" data-container="body" data-content="Отступ первого шага, % – Насколько цена первого buy ордера в таблице закупке должна быть меньше текущей на момент расчета таблицы. Все остальные buy ордера будут еще дешевле">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="firstSteep" class="form-control middle" placeholder="firstSteep" name="firstSteep" value="" />
+
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group" id="orderSteepDiv" style="display: none;">
+            <label class="control-label col-sm-3" for="orderSteep">Order step:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Шаг между ордерами" data-container="body" data-content="Шаг между ордерами, % – процент разницы в цене между ордераи для динамического выставления ордеров">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="orderSteep" class="form-control middle" placeholder="orderSteep" name="orderSteep" value="" />
+
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group" id="orderDepoDiv" style="display: none;">
+            <label class="control-label col-sm-3" for="orderDepo">Order deposit:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Колическтво депозина на ордер" data-container="body" data-content="Колическтво депозина на ордер задается суммой">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="orderDepo" class="form-control middle" placeholder="orderDepo" name="orderDepo" value="" />
+
+                </div>
+            </div>
+            </div>
+
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="closePrice">Overlap price:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Перекрытие хода цены" data-container="body" data-content="Перекрытие хода цены, % – Глубина расчета таблицы buy ордеров. Например, при цене первого шага 10USD процент перекрытия 20% означает, что таблица будет выставлена в диапазоне 8-10USD.">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="closePrice" class="form-control middle" placeholder="closePrice" name="closePrice" value="" />
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="orderCount">Order count:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Количество ордеров" data-container="body" data-content="Количество ордеров – Сколько buy-ордеров помещать в объеме перекрытия.">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="orderCount" class="form-control middle" placeholder="orderCount" name="orderCount" value="" />
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="martin">Martin:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Мартингейл" data-container="body" data-content="Мартингейл, % – При расчете таблицы buy ордеров каждый следующий более дешевый ордер по объему больше предыдущего на это значение.">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="martin" class="form-control middle" placeholder="martin" name="martin" value="" />
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="profit">Profit:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Профит" data-container="body" data-content="Профит, % – Сколько профита закладывать в каждый fix ордер.">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="profit" class="form-control middle" placeholder="profit" name="profit" value="" />
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="fee">Fee:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Комиссия биржы" data-container="body" data-content="Комиссия биржи.">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="fee" class="form-control middle" placeholder="fee" name="fee" value="" />
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="sleepTime">Sleep time:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Время цикла" data-container="body" data-content="Время после которого повторяется цикл. Задается в мс 1000 мс = 1с. Меньше секунды не ставить, банит ip биржа">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="sleepTime" class="form-control middle" placeholder="sleep" name="sleepTime" value="" />
+                    <!--pattern="[0-9]" title="Только цифры, больше 1000"-->
+
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="fixSleepTime">After fix sleep time:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Время сна после исполнения фикса" data-container="body" data-content="Время сна после исполнения фикса.">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="fixSleepTime" class="form-control middle" placeholder="afterFixSleepTime" name="fixSleepTime" value="" />
+                </div>
+            </div>
+            </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-3" for="rebuildProc">Rebuild procent %:</label>
+            <div class="col-sm-5">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                      <a class="btn btn-default" data-toggle="popover" title="Rebuild procent" data-container="body" data-content="Процент от первого ордера цены после которого перестроится цикл.">
+                          <i class="glyphicon glyphicon-question-sign"></i></a>
+                    </span>
+                    <input type="text" id="rebuildProc" class="form-control middle" placeholder="rebuild procent %" name="rebuildProc" value="" />
+                </div>
+            </div>
+            </div>
+
+          </div>
+          <div class="box-footer">
+            <input type="hidden" id="id" name="id" value="" />
+            <!--<input type="hidden" id="version" th:field="*{version}"/>-->
+            <input type="hidden" id="userId" name="userId" value="" />
+            <input type="hidden" id="userBotId" name="userBotId" value="" />
+            <input type="hidden" name="_csrf" value="073bf0c5-9e8c-4483-ab69-8f58a950009c" />
+
+            <button class="btn btn-primary" name="save" value="save" type="submit">Save params</button>
+            <button class="btn btn-primary btn-block" style="display: none;" id="load" name="load" value="load" type="submit">load</button>
+          </div>
+        </form>
+
+      </div>
+      <!-- /.box -->
+      <div class="clearfix"></div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.0
+    </div>
+    <strong>Copyright &copy; 2016-2018 <a href="trade-bot.cf">Trading Bot</a></strong>.
+    All rights reserved.
+  </footer>
+
+</div>
+<!-- ./wrapper -->
+
+  <!-- jQuery 3 -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Main js -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
