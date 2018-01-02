@@ -176,11 +176,25 @@
 }(jQuery)
 
 
+function show_loading() {
+  $('.wrapper').css({ opacity: 0 });
+  $('.page-preloader').show();
+}
+
+function hide_loading() {
+  $('.page-preloader').hide();
+  $('.wrapper').css({ opacity: 1 });
+}
+
 $(document).ready(function () {
   $('[data-toggle="push-menu"]').pushMenu()
   $('[data-toggle="popover"]').popover();
 
-  $("#curPair").select2({
+  $('#curPair').select2({
     placeholder: "Choose pair"
   });
+
+  setTimeout(function() {
+    hide_loading();
+  }, 200)
 });
