@@ -178,14 +178,14 @@
             <div class="form-group">
                 <label class="col-sm-3 control-label">Status</label>
                 <div class="col-sm-5">
-                  <p class="form-control-static">stopped</p>
+                  <p class="form-control-static text-danger text-success">stopped</p>
                   <input type="hidden" value="stopped" />
                 </div>
             </div>
 
             <div class="form-group">
-            <label class="control-label col-sm-3" for="telegramChatId">Currency pair:</label>
-            <div class="col-sm-5">
+                <label class="control-label col-sm-3" for="telegramChatId">Currency pair:</label>
+                <div class="col-sm-5">
                 <select id="curPair" name="curPair" class="form-control middle" onchange="loadPair()">
                     <option value="ETH_GNT">ETH_GNT</option>
                     <option value="BTC_BELA">BTC_BELA</option>
@@ -291,7 +291,7 @@
             </div>
 
             <div class="form-group">
-            <label class="control-label col-sm-3" for="telegramChatId">Strategy</label>
+            <label class="control-label col-sm-3" for="strategy">Strategy</label>
             <div class="col-sm-5">
                 <select id="strategy" name="strategy" class="form-control" onchange="loadStrategy()">
                     <option value="Long">Long</option>
