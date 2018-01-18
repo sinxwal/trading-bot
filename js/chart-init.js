@@ -54,7 +54,17 @@
     window.onload = function() {
         var ctx = document.getElementById("chart-canvas").getContext("2d");
         window.myLine = new Chart(ctx, config);
-        settimeout()
+        setInterval(
+            function() {
+                config.data.datasets.forEach(function(dataset) {
+                    dataset.data = dataset.data.map(function() {
+                        return randomScalingFactor();
+                    });
+
+                });
+
+                window.myLine.update();
+            }, 2000)
     };
 
     /*document.getElementById('randomizeData').addEventListener('click', function() {
