@@ -83,6 +83,12 @@ section.intro, section.features-extra, section.sign-up {
 section.features, section.blog-intro, section.blog {
   background: #F3F4F8; }
 
+canvas{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 /* ==========================================================================
 Global Styles
 ========================================================================== */
@@ -527,7 +533,6 @@ Features-stack
     position: absolute;
     width: 916px;
     height: 540px;
-    background: url("../img/gr.png") no-repeat center center;
     top: 114px;
     z-index: 4;
     left: 50%; }
