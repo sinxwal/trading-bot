@@ -15,6 +15,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="css/admin.css">
   <link rel="stylesheet" href="css/admin-skin.css">
+  <link rel="stylesheet" href="css/iCheck/skins/square/blue.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -300,15 +301,17 @@
             </div>
 
 
-            <div class="form-group" id="TypeShortDiv" style="display: none;">
+            <div class="form-group" id="TypeShortDiv">
             <label class="control-label col-sm-3" for="TypeShort">Type of Short :</label>
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Тип шорта" data-container=".row" data-content="Профит в основной монете">
+                      <a class="btn btn-default" data-toggle="popover" title="Тип шорта" data-container=".form-group" data-content="Профит в основной монете">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
-                    <input type="checkbox" id="TypeShort" class="form-control" name="shortType" value="true" /><input type="hidden" name="_shortType" value="on" />
+                    <div style="margin-top: 5px; margin-left: 5px;">
+                        <input type="checkbox" id="TypeShort" name="shortType" value="true" />
+                    </div>
                 </div>
             </div>
             </div>
@@ -319,7 +322,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Stop loss" data-container="body" data-content="Динамический профит по ограничению Stop loss percent">
+                      <a class="btn btn-default" data-toggle="popover" title="Stop loss" data-container=".form-group" data-content="Динамический профит по ограничению Stop loss percent">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="checkbox" id="StopLoss" class="form-control" name="stopLoss" value="true" /><input type="hidden" name="_stopLoss" value="on" />
@@ -332,7 +335,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Stop loss percent" data-container="body" data-content="Stop  loss prcent параметр для ограничения по падению  динамического профита.">
+                      <a class="btn btn-default" data-toggle="popover" title="Stop loss percent" data-container=".form-group" data-content="Stop  loss prcent параметр для ограничения по падению  динамического профита.">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                  </span>
                     <input type="text" id="stopLossPercent" class="form-control middle" placeholder="Stop loss %" name="lossPercent" value="" />
@@ -346,7 +349,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Telegram Id" data-container="body" data-content="Bot telegram id for notification.">
+                      <a class="btn btn-default" data-toggle="popover" title="Telegram Id" data-container=".form-group" data-content="Bot telegram id for notification.">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                  </span>
                     <input type="text" id="telegramChatId" class="form-control middle" placeholder="Telegram Id" name="telegramChatId" value="" />
@@ -360,7 +363,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Api key" data-container="body" data-content="Excange accouunt api key.">
+                      <a class="btn btn-default" data-toggle="popover" title="Api key" data-container=".form-group" data-content="Excange accouunt api key.">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="ApiKey" class="form-control middle" placeholder="ApiKey" name="apiKey" value="" />
@@ -373,7 +376,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Secret key" data-container="body" data-content="Excange accouunt secret key.">
+                      <a class="btn btn-default" data-toggle="popover" title="Secret key" data-container=".form-group" data-content="Excange accouunt secret key.">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="SecretKey" class="form-control middle" placeholder="SecretKey" name="secretKey" value="" />
@@ -387,7 +390,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Использование депо сумма" data-container="body" data-content="сумма для депозита">
+                      <a class="btn btn-default" data-toggle="popover" title="Использование депо сумма" data-container=".form-group" data-content="сумма для депозита">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <span class="input-group-addon label-info" title="DepoCur" id="depoCur">ETH</span>
@@ -404,7 +407,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Использование депо %" data-container="body" data-content="Использование депозит, % – какую часть от твоих USD пускать в оборот">
+                      <a class="btn btn-default" data-toggle="popover" title="Использование депо %" data-container=".form-group" data-content="Использование депозит, % – какую часть от твоих USD пускать в оборот">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="Depo" class="form-control middle" placeholder="Deposit" name="depoPercent" value="" />
@@ -418,7 +421,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Отступ первого шага" data-container="body" data-content="Отступ первого шага, % – Насколько цена первого buy ордера в таблице закупке должна быть меньше текущей на момент расчета таблицы. Все остальные buy ордера будут еще дешевле">
+                      <a class="btn btn-default" data-toggle="popover" title="Отступ первого шага" data-container=".form-group" data-content="Отступ первого шага, % – Насколько цена первого buy ордера в таблице закупке должна быть меньше текущей на момент расчета таблицы. Все остальные buy ордера будут еще дешевле">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="firstSteep" class="form-control middle" placeholder="firstSteep" name="firstSteep" value="" />
@@ -432,7 +435,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Шаг между ордерами" data-container="body" data-content="Шаг между ордерами, % – процент разницы в цене между ордераи для динамического выставления ордеров">
+                      <a class="btn btn-default" data-toggle="popover" title="Шаг между ордерами" data-container=".form-group" data-content="Шаг между ордерами, % – процент разницы в цене между ордераи для динамического выставления ордеров">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="orderSteep" class="form-control middle" placeholder="orderSteep" name="orderSteep" value="" />
@@ -446,7 +449,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Колическтво депозина на ордер" data-container="body" data-content="Колическтво депозина на ордер задается суммой">
+                      <a class="btn btn-default" data-toggle="popover" title="Колическтво депозина на ордер" data-container=".form-group" data-content="Колическтво депозина на ордер задается суммой">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="orderDepo" class="form-control middle" placeholder="orderDepo" name="orderDepo" value="" />
@@ -461,7 +464,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Перекрытие хода цены" data-container="body" data-content="Перекрытие хода цены, % – Глубина расчета таблицы buy ордеров. Например, при цене первого шага 10USD процент перекрытия 20% означает, что таблица будет выставлена в диапазоне 8-10USD.">
+                      <a class="btn btn-default" data-toggle="popover" title="Перекрытие хода цены" data-container=".form-group" data-content="Перекрытие хода цены, % – Глубина расчета таблицы buy ордеров. Например, при цене первого шага 10USD процент перекрытия 20% означает, что таблица будет выставлена в диапазоне 8-10USD.">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="closePrice" class="form-control middle" placeholder="closePrice" name="closePrice" value="" />
@@ -474,7 +477,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Количество ордеров" data-container="body" data-content="Количество ордеров – Сколько buy-ордеров помещать в объеме перекрытия.">
+                      <a class="btn btn-default" data-toggle="popover" title="Количество ордеров" data-container=".form-group" data-content="Количество ордеров – Сколько buy-ордеров помещать в объеме перекрытия.">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="orderCount" class="form-control middle" placeholder="orderCount" name="orderCount" value="" />
@@ -487,7 +490,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Мартингейл" data-container="body" data-content="Мартингейл, % – При расчете таблицы buy ордеров каждый следующий более дешевый ордер по объему больше предыдущего на это значение.">
+                      <a class="btn btn-default" data-toggle="popover" title="Мартингейл" data-container=".form-group" data-content="Мартингейл, % – При расчете таблицы buy ордеров каждый следующий более дешевый ордер по объему больше предыдущего на это значение.">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="martin" class="form-control middle" placeholder="martin" name="martin" value="" />
@@ -500,7 +503,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Профит" data-container="body" data-content="Профит, % – Сколько профита закладывать в каждый fix ордер.">
+                      <a class="btn btn-default" data-toggle="popover" title="Профит" data-container=".form-group" data-content="Профит, % – Сколько профита закладывать в каждый fix ордер.">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="profit" class="form-control middle" placeholder="profit" name="profit" value="" />
@@ -513,7 +516,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Комиссия биржы" data-container="body" data-content="Комиссия биржи.">
+                      <a class="btn btn-default" data-toggle="popover" title="Комиссия биржы" data-container=".form-group" data-content="Комиссия биржи.">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="fee" class="form-control middle" placeholder="fee" name="fee" value="" />
@@ -526,7 +529,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Время цикла" data-container="body" data-content="Время после которого повторяется цикл. Задается в мс 1000 мс = 1с. Меньше секунды не ставить, банит ip биржа">
+                      <a class="btn btn-default" data-toggle="popover" title="Время цикла" data-container=".form-group" data-content="Время после которого повторяется цикл. Задается в мс 1000 мс = 1с. Меньше секунды не ставить, банит ip биржа">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="sleepTime" class="form-control middle" placeholder="sleep" name="sleepTime" value="" />
@@ -541,7 +544,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Время сна после исполнения фикса" data-container="body" data-content="Время сна после исполнения фикса.">
+                      <a class="btn btn-default" data-toggle="popover" title="Время сна после исполнения фикса" data-container=".form-group" data-content="Время сна после исполнения фикса.">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="fixSleepTime" class="form-control middle" placeholder="afterFixSleepTime" name="fixSleepTime" value="" />
@@ -554,7 +557,7 @@
             <div class="col-sm-5">
                 <div class="input-group">
                     <span class="input-group-btn">
-                      <a class="btn btn-default" data-toggle="popover" title="Rebuild procent" data-container="body" data-content="Процент от первого ордера цены после которого перестроится цикл.">
+                      <a class="btn btn-default" data-toggle="popover" title="Rebuild procent" data-container=".form-group" data-content="Процент от первого ордера цены после которого перестроится цикл.">
                           <i class="glyphicon glyphicon-question-sign"></i></a>
                     </span>
                     <input type="text" id="rebuildProc" class="form-control middle" placeholder="rebuild procent %" name="rebuildProc" value="" />
@@ -598,6 +601,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
   <!-- Bootstrap 3.3.7 -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Checkboxes -->
+  <script src="js/icheck.min.js"></script>
   <!-- Main js -->
   <script src="js/admin.js"></script>
 
